@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylemb.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <main class="container">        
+        <figure>
+            <div class="front">
+                <img src="interactive-card-form/imágenes/bg-card-front.png" alt="front of the card" >
+                <h3 class="front-numbers">0000 0000 0000 0000</h3>
+                <h3 class="front-name">JANE APPLESEED</h3>
+                <h3 class="front-date">00/00</h3>
+            </div>
+            <div class="back">
+                <img src="interactive-card-form/imágenes/bg-card-back.png" alt="back of the card" >
+                <h3 class="back-numbers">000</h3>
+            </div>
+        </figure>
+        <form class="container-flex">
+            <section class="container-flex">
+                
+                <label for="cardholder-name" class="flex-item">Cardholder Name</label>
+                <input type="text" class="flex-item" id="cardholder-name" name="cardholder-name"
+                placeholder="e.g. Jane Appleseed" required>
+                
+                <label for="card-number" class="flex-item">Card Number</label>
+                <input type="text" class="flex-item" id="card-number" name="card-number" maxlength="19" pattern="[0-9]*"
+                inputmode="numerical" placeholder="e.g. 1234 5678 9123 0000" required>
+                
+                <span>
+                    <span class="date">
+                        <label class=" exp-date flex-item">Exp. Date (MM/YY)</label>
+                        <input class="exp flex-item" id="month" name="exp-date" maxlength="2" pattern="[0-9]*"
+                        inputmode="numerical" placeholder="MM" type="text" data-pattern-validate />
+                        
+                        <input class="exp flex-item" id="year" name="exp-date" maxlength="2" pattern="[0-9]*"
+                        inputmode="numerical" placeholder="YY" type="text" data-pattern-validate />
+                </span>
+                <span class="field-size">
+                    <label class="cvc flex-item">cvc</label>
+                    <input class="flex-item" id="cvc" maxlength="3" pattern="[0-9]*" inputmode="numerical"
+                    placeholder="e.g. 123" type="text" data-pattern-validate />
+                </span>
+            </span>
+            
+            <input type="submit" value="confirm" class="flex-item">
+        </section>
+        </form>
+    </main>
+</body>
+
+</html>

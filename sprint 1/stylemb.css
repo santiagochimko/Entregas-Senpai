@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    max-width: 1440px;
+}
+
+figure {
+    width: 40%;
+    height: 100vh;
+    background: url(interactive-card-form/imágenes/bg-main-mobile.png);
+    background-size: cover;
+}
+
+img {
+    width: 440px;
+}
+
+.back,
+.front {
+    position: relative;
+    width: 440px;
+}
+
+.back {
+    right: -44%;
+    top: 23%;
+}
+
+.front {
+    left: 34%;
+    top: 20%;
+}
+
+.front-numbers {
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    color: white;
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-weight: lighter;
+    width: 100%;
+}
+
+.front-name {
+    position: absolute;
+    top: 60%;
+    left: 15%;
+    font-size: 16px;
+    color: white;
+}
+
+.front-date {
+    position: absolute;
+    top: 60%;
+    left: 74%;
+    font-size: 16px;
+    color: white;
+}
+
+.back-numbers {
+    position: absolute;
+    top: 43%;
+    right: 12%;
+    color: white;
+    font-size: 16px;
+}
+
+.container-flex {
+    display: flex;
+    width: 60%;
+    margin-top: 55px;
+    padding: 10px;
+    flex-direction: column;
+    gap: 15px;
+}
+
+section {
+    width: 40%;
+    margin-left: 25%;
+}
+
+.flex-item {
+    display: flex;
+    text-transform: uppercase;
+}
+
+span {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.date {
+    display: flex;
+    gap: 10px;
+    width: 190px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+form {
+    width: 100%;
+    height: 60vh;
+}
+
+
+.field-size {
+    display: flex;
+    gap: 10px;
+    width: 180px;
+    flex-direction: column;
+}
+
+.exp {
+    width: 42% !important;
+}
+
+#cvc {
+    width: 100%;
+}
+
+.block {
+    display: block;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+input[type="submit"] {
+    margin: 10px 0 10px 0;
+    padding: 5px;
+    background-color: #195faf;
+    color: white;
+    height: 50px;
+    border-radius: 8px;
+    font-size: 16px;
+    text-transform: capitalize;
+    border: none;
+    justify-content: center;    
+}
+
+input[type="submit"]:hover {
+    transition: .5s;
+    background-color: #4789d3;
+    cursor: pointer;
+}
+
+input[type="text"] {
+    height: 42px;
+    padding: 20px !important;
+    border-radius: 10px;
+    font-size: 16px;
+    text-transform: capitalize;
+    border: 1px solid #a1a1a1;
+}
+
+@media only screen and (max-width: 360px) {
+
+
+    body {
+        font-family: 'Space Grotesk', sans-serif;
+    }
+
+    figure {
+        width: 100%;
+        height: 30vh;
+        background: url(interactive-card-form/imágenes/bg-main-mobile.png);
+        background-size: cover;
+    }
+
+    img {
+        width: 300px;
+    }
+
+    .back,
+    .front {
+        position: relative;
+        width: 297px;
+    }
+
+    .back {
+
+        right: -15%;
+        top: -53%;
+        z-index: 1;
+    }
+
+    .front {
+        left: 5%;
+        top: 50%;
+        z-index: 2;
+    }
+
+    .front-numbers {
+        position: absolute;
+        top: 40%;
+        left: 15%;
+        color: white;
+        font-size: 16px;
+        letter-spacing: 2px;
+        font-weight: lighter;
+        width: 100%;
+    }
+
+    .front-name {
+        position: absolute;
+        top: 60%;
+        left: 15%;
+        font-size: 12px;
+        color: white;
+    }
+
+    .front-date {
+        position: absolute;
+        top: 60%;
+        left: 74%;
+        font-size: 12px;
+        color: white;
+    }
+
+    .back-numbers {
+        position: absolute;
+        top: 43%;
+        right: 12%;
+        color: white;
+        font-size: 16px;
+    }
+
+    .container-flex {
+        display: flex;
+        width: 100%;
+        margin-top: 55px;
+        padding: 10px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    section {
+        margin-left: 0;
+    }
+
+    .flex-item {
+        display: flex;
+        text-transform: uppercase;
+    }
+
+    span {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .date {
+        display: flex;
+        gap: 10px;
+        width: 190px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    form {
+        width: 100%;
+        height: 60vh;
+    }
+
+
+    .field-size {
+        display: flex;
+        gap: 10px;
+        width: 180px;
+        flex-direction: column;
+    }
+
+    .exp {
+        width: 42% !important;
+    }
+
+    #cvc {
+        width: 100%;
+    }
+
+    .block {
+        display: block;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input[type="submit"] {
+        margin: 10px 0 10px 0;
+        padding: 5px;
+        background-color: #195faf;
+        color: white;
+        height: 50px;
+        border-radius: 8px;
+        font-size: 16px;
+        text-transform: capitalize;
+        border: none;
+        justify-content: center;
+    }
+
+    input[type="submit"]:hover {
+        transition: .5s;
+        background-color: #4789d3;
+        cursor: pointer;
+    }
+
+    input[type="text"] {
+        height: 42px;
+        padding: 20px !important;
+        border-radius: 10px;
+        font-size: 16px;
+        text-transform: capitalize;
+        border: 1px solid #a1a1a1;
+    }
+}
