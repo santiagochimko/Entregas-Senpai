@@ -164,7 +164,7 @@ input[type="text"] {
     border: 1px solid #a1a1a1;
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 375px) {
 
 
     body {
