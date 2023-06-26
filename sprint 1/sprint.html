@@ -34,8 +34,8 @@
                 placeholder="e.g. Jane Appleseed" required>
                 
                 <label for="card-number" class="flex-item">Card Number</label>
-                <input type="text" class="flex-item" id="card-number" name="card-number" maxlength="19" pattern="[0-9]*"
-                inputmode="numerical" placeholder="e.g. 1234 5678 9123 0000" required>
+                <input type="text" class="flex-item" id="card-number" name="card-number" maxlength="19"
+                placeholder="e.g. 1234 5678 9123 0000" required>
                 
                 <span>
                     <span class="date">
@@ -54,9 +54,18 @@
             </span>
             
             <input type="submit" value="confirm" class="flex-item">
+            
         </section>
         </form>
+        <section class="pantalla-completado">
+            <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40" fill="url(#a)"/><path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3"/><defs><linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse"><stop stop-color="#6348FE"/><stop offset="1" stop-color="#610595"/></linearGradient></defs></svg>
+            <h1>THANK YOU</h1>
+            <h2>We've added your card details</h2>
+            <input type="submit" value="Continue" class="flex-item" id="reestablecer">
+        </section>
     </main>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
