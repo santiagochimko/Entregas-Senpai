@@ -1,8 +1,11 @@
+import React from "react";
 import styles from './task.module.css';
 import { BsFillCheckCircleFill } from 'react-icons/bs';
-import { TbTrash } from 'react-icons/tb';
+import { TiTrash } from 'react-icons/ti';
 
-export function Task({ task, onDelete, onComplete }) {
+export function Task({ task, onDelete, onComplete/*, isDayMode, toggleMode*/ }) {  
+  
+
   return (
     <div className={styles.task}>
       <button className={styles.checkContainer} onClick={() => onComplete(task.id)}>
@@ -14,8 +17,8 @@ export function Task({ task, onDelete, onComplete }) {
       </p>
 
       <button className={styles.deleteButton} onClick={() => onDelete(task.id)}>
-        <TbTrash size={20} />
-      </button>
+  <TiTrash size={20} />
+</button>
     </div>
   )
 }

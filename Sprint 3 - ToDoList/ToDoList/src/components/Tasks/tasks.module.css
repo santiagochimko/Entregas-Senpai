@@ -1,3 +1,13 @@
+/* .tasksDayMode{
+  position: relative;
+  top: -40px;
+  width: 100%;
+  max-width: 706px;
+  margin: 0 auto;
+  background-color: hsl(0, 0%, 98%);
+  border-radius: 8px;
+} */
+
 .tasks {
   position: relative;
   top: -40px;
@@ -51,20 +61,44 @@
   cursor: pointer;
 }
 
-.fillterButton{  
-    background-color: transparent;
-    border: none;
-    color: #696969;
-    cursor: pointer;  
+.fillterButton {
+  background-color: transparent;
+  border: none;
+  color: #696969;
+  cursor: pointer;
 }
 
-.fillterButton:hover{
+.fillterButton:hover {
   color: #F2F2F2;
   font-weight: 700;
 }
 
 .fillterButton:focus,
-.fillterButton.active{
+.fillterButton.active {
   color: #8284FA;
   font-weight: 700;
+}
+.filterButtons{
+  display: none;
+}
+
+@media only screen and (max-width: 425px) {
+  .tasks {
+    width: 93%;
+  }
+
+  footer .filterButtons {
+    display: none;
+  }
+
+  .filterButtons {
+    display: flex;
+    width: 93%;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #333333;
+    border-radius: 8px;
+  }
 }

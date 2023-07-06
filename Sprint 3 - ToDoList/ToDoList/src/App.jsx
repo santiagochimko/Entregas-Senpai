@@ -3,12 +3,18 @@ import { Header } from "./components/Header";
 import { Tasks } from "./components/Tasks";
 
 function App() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState([/*{id:1, title:'Comprar agua', isCompleted:false}*/]);
   const [filter, setFilter] = useState('all');
 
+  /*const [isDayMode, setIsDayMode] = useState(true);
+
+  function toggleMode() {
+    setIsDayMode(!isDayMode);
+  }
+*/
   function addTask(taskTitle) {
     const newTask = {
-      id: Date.now(),
+      id: tasks.length > 0 ? tasks[tasks.length - 1].id + 1 : 1,
       title: taskTitle,
       isCompleted: false
     };
@@ -40,13 +46,20 @@ function App() {
 
   return (
     <>
-      <Header handleAddTask={addTask} />
+      <Header 
+      handleAddTask={addTask} 
+      /*isDayMode={isDayMode} 
+      toggleMode={toggleMode}*/
+      />
+      
       <Tasks
         tasks={tasks}
         onDelete={deleteTaskById}
         onComplete={toggleTaskCompletedById}
         onClearCompleted={handleClearCompleted}
         filter={filter}
+        /*isDayMode={isDayMode}
+        toggleMode={toggleMode} */
       />
     </>
   );
