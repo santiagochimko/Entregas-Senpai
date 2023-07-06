@@ -3,13 +3,8 @@ import { useState } from "react";
 import dayModeIcon from "../../assets/icon-sun.svg";
 import nightModeIcon from "../../assets/icon-moon.svg";
 
-export function Header({ handleAddTask}) {
-  const [title, setTitle] = useState("");
-  const [isDayMode, setIsDayMode] = useState(true);
-
-  function toggleMode() {
-    setIsDayMode(!isDayMode);
-  }
+export function Header({ handleAddTask, isDayMode, toggleMode}) {
+  const [title, setTitle] = useState("");  
 
   function handleSubmit(event) {
     event.preventDefault();

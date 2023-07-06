@@ -6,12 +6,12 @@ function App() {
   const [tasks, setTasks] = useState([/*{id:1, title:'Comprar agua', isCompleted:false}*/]);
   const [filter, setFilter] = useState('all');
 
-  /*const [isDayMode, setIsDayMode] = useState(true);
+  const [isDayMode, setIsDayMode] = useState(true);
 
   function toggleMode() {
     setIsDayMode(!isDayMode);
   }
-*/
+
   function addTask(taskTitle) {
     const newTask = {
       id: tasks.length > 0 ? tasks[tasks.length - 1].id + 1 : 1,
@@ -48,8 +48,8 @@ function App() {
     <>
       <Header 
       handleAddTask={addTask} 
-      /*isDayMode={isDayMode} 
-      toggleMode={toggleMode}*/
+      isDayMode={isDayMode} 
+      toggleMode={toggleMode}
       />
       
       <Tasks
@@ -58,8 +58,8 @@ function App() {
         onComplete={toggleTaskCompletedById}
         onClearCompleted={handleClearCompleted}
         filter={filter}
-        /*isDayMode={isDayMode}
-        toggleMode={toggleMode} */
+        isDayMode={isDayMode}
+        toggleMode={toggleMode} 
       />
     </>
   );

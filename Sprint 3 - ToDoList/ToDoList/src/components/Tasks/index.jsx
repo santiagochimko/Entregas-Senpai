@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Task } from "../Task";
 import styles from "./tasks.module.css";
 
-export function Tasks({ tasks, onDelete, onComplete, onClearCompleted /*, isDayMode, toggleMode*/ }) {
+export function Tasks({ tasks, onDelete, onComplete, onClearCompleted , isDayMode, toggleMode }) {
   const [currentFilter, setFilter] = useState("all");
 
   const remainingTasks = tasks.filter((task) => !task.isCompleted).length;
@@ -22,7 +22,7 @@ export function Tasks({ tasks, onDelete, onComplete, onClearCompleted /*, isDayM
 
   return (
     <>
-      <section className={styles.tasks}>
+      <section className={`${isDayMode ? styles.tasksDayMode : styles.tasks}`}>
         <div className={styles.list}>
           {filteredTasks.map((task) => (
             <Task
@@ -30,8 +30,8 @@ export function Tasks({ tasks, onDelete, onComplete, onClearCompleted /*, isDayM
               task={task}
               onDelete={onDelete}
               onComplete={onComplete}
-             /* isDayMode={isDayMode}
-              toggleMode={toggleMode}*/
+              isDayMode={isDayMode}
+              toggleMode={toggleMode}
             />
           ))}
         </div>
@@ -71,7 +71,7 @@ export function Tasks({ tasks, onDelete, onComplete, onClearCompleted /*, isDayM
           </button>
           </div>
 
-          <button className={styles.clearButton} onClick={handleClearCompleted}>
+          <button className={`${isDayMode ? styles.clearButtonDayMode : styles.clearButton}`} onClick={handleClearCompleted}>
             Clear completed
           </button>
         </footer>        

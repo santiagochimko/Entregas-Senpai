@@ -3,11 +3,11 @@ import styles from './task.module.css';
 import { BsFillCheckCircleFill } from 'react-icons/bs';
 import { TiTrash } from 'react-icons/ti';
 
-export function Task({ task, onDelete, onComplete/*, isDayMode, toggleMode*/ }) {  
+export function Task({ task, onDelete, onComplete, isDayMode }) {  
   
 
   return (
-    <div className={styles.task}>
+    <div className={`${isDayMode ? styles.taskDayMode : styles.task}`}>
       <button className={styles.checkContainer} onClick={() => onComplete(task.id)}>
         {task.isCompleted ? <BsFillCheckCircleFill /> : <div />}
       </button>
