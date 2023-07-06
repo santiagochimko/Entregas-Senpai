@@ -1,4 +1,4 @@
-.tasksDayMode{
+.tasksDayMode {
   position: relative;
   top: -40px;
   width: 100%;
@@ -6,7 +6,8 @@
   margin: 0 auto;
   background-color: hsl(0, 0%, 98%);
   border-radius: 8px;
-} 
+  box-shadow: 3px 3px 16px 2px rgba(0, 0, 0, 0.44);
+}
 
 .tasks {
   position: relative;
@@ -16,6 +17,7 @@
   margin: 0 auto;
   background-color: #333333;
   border-radius: 8px;
+  box-shadow: 3px 3px 16px 2px rgba(0, 0, 0, 0.44);
 }
 
 .footer {
@@ -67,6 +69,24 @@
   cursor: pointer;
 }
 
+.filterButtonDayMode {
+  background-color: transparent;
+  border: none;
+  color: #696969;
+  cursor: pointer;
+}
+
+.filterButtonDayMode:hover {
+  color: hsl(237, 14%, 26%);
+  font-weight: 700;
+}
+
+.filterButtonDayMode:focus,
+.filterButtonDayMode:active {
+  color: #8284FA;
+  font-weight: 700;
+}
+
 .fillterButton {
   background-color: transparent;
   border: none;
@@ -84,17 +104,42 @@
   color: #8284FA;
   font-weight: 700;
 }
-.filterButtons{
+
+.filterButtonsDayMode {
+  display: none;
+}
+
+.filterButtons {
   display: none;
 }
 
 @media only screen and (max-width: 425px) {
+  .tasksDayMode {
+    width: 93%;
+  }
+
   .tasks {
     width: 93%;
   }
 
+  footer .filterButtonsDayMode {
+    display: none;
+  }
+
   footer .filterButtons {
     display: none;
+  }
+
+  .filterButtonsDayMode {
+    display: flex;
+    width: 93%;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: hsl(0, 0%, 98%);
+    border-radius: 8px;
+    box-shadow: 3px 3px 16px 2px rgba(0, 0, 0, 0.44);
   }
 
   .filterButtons {
@@ -106,5 +151,7 @@
     padding: 1rem;
     background: #333333;
     border-radius: 8px;
+    box-shadow: 3px 3px 16px 2px rgba(0, 0, 0, 0.44);
   }
+
 }

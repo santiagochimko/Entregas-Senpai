@@ -6,7 +6,7 @@
   }
   
   body {
-    background: #191919;
+    background: hsl(236, 33%, 92%);
     color: #F2F2F2;
     min-height: 100vh;
   }

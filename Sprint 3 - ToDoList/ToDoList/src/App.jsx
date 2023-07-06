@@ -10,6 +10,9 @@ function App() {
 
   function toggleMode() {
     setIsDayMode(!isDayMode);
+
+    const body = document.querySelector('body');
+  body.style.backgroundColor = isDayMode ? '#191919' : 'hsl(236, 33%, 92%)';
   }
 
   function addTask(taskTitle) {

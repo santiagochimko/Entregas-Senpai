@@ -3,7 +3,14 @@ import { useState } from "react";
 import { Task } from "../Task";
 import styles from "./tasks.module.css";
 
-export function Tasks({ tasks, onDelete, onComplete, onClearCompleted , isDayMode, toggleMode }) {
+export function Tasks({
+  tasks,
+  onDelete,
+  onComplete,
+  onClearCompleted,
+  isDayMode,
+  toggleMode,
+}) {
   const [currentFilter, setFilter] = useState("all");
 
   const remainingTasks = tasks.filter((task) => !task.isCompleted).length;
@@ -42,68 +49,81 @@ export function Tasks({ tasks, onDelete, onComplete, onClearCompleted , isDayMod
             <p>{remainingTasks === 1 ? "item" : "items"} left</p>
           </div>
 
-          <div className={styles.filterButtons}>
-          <button
-            className={`${styles.fillterButton} ${
-              currentFilter === "all" ? styles.active : ""
+          <div
+            className={`${
+              isDayMode ? styles.filterButtonsDayMode : styles.filterButtons
             }`}
-            onClick={() => setFilter("all")}
           >
-            All
-          </button>
+            <button
+              className={`${
+                isDayMode ? styles.filterButtonDayMode : styles.fillterButton
+              } ${currentFilter === "all" ? styles.active : ""}`}
+              onClick={() => setFilter("all")}
+            >
+              All
+            </button>
 
-          <button
-            className={`${styles.fillterButton} ${
-              currentFilter === "active" ? styles.active : ""
-            }`}
-            onClick={() => setFilter("active")}
-          >
-            Active
-          </button>
+            <button
+              className={`${
+                isDayMode ? styles.filterButtonDayMode : styles.fillterButton
+              } ${currentFilter === "active" ? styles.active : ""}`}
+              onClick={() => setFilter("active")}
+            >
+              Active
+            </button>
 
-          <button
-            className={`${styles.fillterButton} ${
-              currentFilter === "completed" ? styles.active : ""
-            }`}
-            onClick={() => setFilter("completed")}
-          >
-            Completed
-          </button>
+            <button
+              className={`${
+                isDayMode ? styles.filterButtonDayMode : styles.fillterButton
+              } ${currentFilter === "completed" ? styles.active : ""}`}
+              onClick={() => setFilter("completed")}
+            >
+              Completed
+            </button>
           </div>
 
-          <button className={`${isDayMode ? styles.clearButtonDayMode : styles.clearButton}`} onClick={handleClearCompleted}>
+          <button
+            className={`${
+              isDayMode ? styles.clearButtonDayMode : styles.clearButton
+            }`}
+            onClick={handleClearCompleted}
+          >
             Clear completed
           </button>
-        </footer>        
+        </footer>
       </section>
-      <div className={styles.filterButtons}>
-          <button
-            className={`${styles.fillterButton} ${
-              currentFilter === "all" ? styles.active : ""
-            }`}
-            onClick={() => setFilter("all")}
-          >
-            All
-          </button>
+      <div
+        className={`${
+          isDayMode ? styles.filterButtonsDayMode : styles.filterButtons
+        }`}
+      >
+        <button
+          className={`${
+            isDayMode ? styles.filterButtonDayMode : styles.fillterButton
+          } ${currentFilter === "all" ? styles.active : ""}`}
+          onClick={() => setFilter("all")}
+        >
+          All
+        </button>
 
-          <button
-            className={`${styles.fillterButton} ${
-              currentFilter === "active" ? styles.active : ""
-            }`}
-            onClick={() => setFilter("active")}
-          >
-            Active
-          </button>
+        <button
+          className={`${
+            isDayMode ? styles.filterButtonDayMode : styles.fillterButton
+          } ${currentFilter === "active" ? styles.active : ""}`}
+          onClick={() => setFilter("active")}
+        >
+          Active
+        </button>
 
-          <button
-            className={`${styles.fillterButton} ${
-              currentFilter === "completed" ? styles.active : ""
-            }`}
-            onClick={() => setFilter("completed")}
-          >
-            Completed
-          </button>
-          </div>
+        <button
+          className={`${
+            isDayMode ? styles.filterButtonDayMode : styles.fillterButton
+          } ${currentFilter === "completed" ? styles.active : ""}`}
+          onClick={() => setFilter("completed")}
+        >
+          Completed
+        </button>
+      </div>
     </>
   );
 }
